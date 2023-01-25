@@ -23,7 +23,6 @@ export class MovieRemoteDataSourceImpl implements MovieRemoteDataSource {
     }
 
     async getMovieById(id: number): Promise<MovieModel> {
-        console.log('eee');
         const url = `${env.url}/movie/${id}`;
         const res = await this.request.getRequest(url, {});
         return res.data;
@@ -32,14 +31,12 @@ export class MovieRemoteDataSourceImpl implements MovieRemoteDataSource {
     async getMovies(page: number, startDate?: string, endDate?: string): Promise<DiscoverMoviesModel> {
         const url = `${env.url}/discover/movie?page=${page}&primary_release_date.gte=${startDate}&primary_release_date.lte=${endDate}`
         const res = await this.request.getRequest(url, {}, false);
-        // console.log(res.data.results);
         return res.data;
     }
 
     async getGenres(): Promise<GenreModel[]> {
         const url = `${env.url}/genre/movie/list`
         const res = await this.request.getRequest(url, {});
-        // console.log(res.data.results);
         return res.data.genres;
     }
 }

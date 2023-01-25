@@ -11,7 +11,6 @@ export const MovieDetailsWidget = (props: MovieDetailsWidgetProps) => {
     const {movie, credit} = props
     const coverImageUrl = movie === undefined ? '' : `https://image.tmdb.org/t/p/w400/${movie.poster_path}`;
     const sortedCasts = credit.cast.sort((a, b) => b.popularity - a.popularity).slice(0, 10);
-    console.log('sorted cast', sortedCasts);
     return (
         <div className="">
             <div className="flex">

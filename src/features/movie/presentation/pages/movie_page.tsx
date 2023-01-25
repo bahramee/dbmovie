@@ -27,7 +27,6 @@ export default function MoviePage(props: MoviePageProps) {
                 setTimeout(() => {
                 }, 250);
                 if(movie === undefined) {
-                    console.log('gilmaz', movie);
                     setLoading(true)
                 } else {
                     
@@ -36,7 +35,6 @@ export default function MoviePage(props: MoviePageProps) {
                     setLoading(false);
                 };
             })
-            //   console.log('response e sisi', response);
         }
 
         fetchUsecases();

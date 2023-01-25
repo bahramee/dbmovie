@@ -37,7 +37,6 @@ export default function HomePage(props: HomePageProps) {
     const formatedStartDate = startDate !== null ? moment(startDate).format("YYYY-MM-DD") : '';
     const formatedEndDate = endDate !== null ? moment(endDate).format("YYYY-MM-DD") : '';
     await di.GetMovies.invoke({ page: p, startDate: formatedStartDate, endDate: formatedEndDate }).then((_movies) => {
-      console.log(_movies);
       setLoading(false);
       setMovies(_movies);
     });
@@ -77,7 +76,6 @@ export default function HomePage(props: HomePageProps) {
   }
 
   const onChangeEndDate = (date: any) => {
-    console.log(date)
     setEndDate(date);
   }
 

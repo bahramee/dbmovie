@@ -13,7 +13,6 @@ export class MovieRepositoryImpl implements MovieRepository {
     }
 
     async getMovieById(id: number): Promise<Movie> {
-        console.log('first')
         return await this.remoteDatasource.getMovieById(id);
     }
 
