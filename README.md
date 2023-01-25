@@ -1,6 +1,8 @@
 # React Clean Architecture dbmovie (List of movies)
 
 this project implemented on Clean Architecture and styled with tailwind.
+
+## Philosophy
 ![alt text](clean.webp)
 ## Available Scripts
 
