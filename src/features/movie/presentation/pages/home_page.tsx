@@ -18,8 +18,8 @@ export default function HomePage(props: HomePageProps) {
   const [genres, setGenres] = useState<Genre[]>([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(new Date());
+  const [startDate, setStartDate] = useState();
+  const [endDate, setEndDate] = useState();
 
   useEffect(() => {
     async function fetchUsecases() {
@@ -73,7 +73,6 @@ export default function HomePage(props: HomePageProps) {
   }
 
   const onChangeStartDate = (date: any) => {
-    console.log(date)
     setStartDate(date);
   }
 

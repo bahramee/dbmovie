@@ -20,11 +20,14 @@ export const SearchWidget = (props: SearchWidgetProps) => {
                     selected={startDate}
                     onChange={(date:any) => onChangeStart(date)}
                     placeholderText="Start Date"
+                    className="px-2 text-sm"
                 />
+                <div className="pb-2"></div>
                 <DatePicker
                     selected={endDate}
                     onChange={(date:any) => onChangeEnd(date)}
                     placeholderText="End Date"
+                    className="px-2 text-sm"
                 />
             </div>
             <button onClick={onClickSearch} className="rounded-full bg-primary px-3 py-1 text-white flex-none">Search</button>

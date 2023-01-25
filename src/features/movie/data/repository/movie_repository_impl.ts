@@ -1,4 +1,4 @@
-import { DiscoverMovies, Genre, Movie } from "../../domain/entity";
+import { Credit, DiscoverMovies, Genre, Movie } from "../../domain/entity";
 import { MovieRepository } from "../../domain/repository/movie_repository";
 import { MovieRemoteDataSource } from "../datasource/movie_remote_data_source";
 
@@ -8,7 +8,12 @@ export class MovieRepositoryImpl implements MovieRepository {
     constructor(_remoteDatasource: MovieRemoteDataSource) {
         this.remoteDatasource = _remoteDatasource
     }
+    async getMovieCredit(id: number): Promise<Credit> {
+        return await this.remoteDatasource.getMovieCredit(id);
+    }
+
     async getMovieById(id: number): Promise<Movie> {
+        console.log('first')
         return await this.remoteDatasource.getMovieById(id);
     }
 

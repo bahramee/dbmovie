@@ -2,6 +2,8 @@ import { DateRange } from "@mui/icons-material"
 import { Link } from "react-router-dom"
 import { Genre, Movie } from "../../domain/entity"
 import { BadgeWidget } from "./badge_widget"
+import { VoteWidget } from "./vote_widget";
+
 
 interface MoviesGridWidgetProps {
     movies: Movie[];
@@ -35,9 +37,10 @@ export const MoviesGridWidget = (props: MoviesGridWidgetProps) => {
                             <img className="rounded-l-md mt-[1px] ml-[1px] mb-[1px]" width={140} src={imageUrl} alt="" />
                             {/* <div className={`bg-primary mt-[2px] ml-[2px] mb-[2px] w-2/5 rounded-l-md bg-cover bg-no-repeat bg-[url('https://image.tmdb.org/t/p/w200/26yQPXymbWeCLKwcmyL8dRjAzth.jpg')]`}></div> */}
                             <div className="h-[180px] w-3/5 rounded-r-md flex-col p-3">
-                                <div className="grow">
+                                <div className="grow pb-2">
                                     <h1 className="text-md text-pen font-bold">{movie.title}</h1>
                                 </div>
+                                <VoteWidget vote={movie.vote_average}/>
                                 <span className="flex items-center pt-7 text-pengrey">
                                     <DateRange color="inherit" fontSize="small" /><p className="text-xs">{movie.release_date}</p>
                                 </span>

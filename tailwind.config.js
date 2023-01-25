@@ -10,7 +10,7 @@ module.exports = {
     extend: {
       colors: {
         primary: colors.blue['500'],
-        secondary: colors.teal['200'],
+        secondary: colors.purple['500'],
         pen: colors.black,
         pengrey: colors.gray['600'],
         penlight: colors.gray['400'],
