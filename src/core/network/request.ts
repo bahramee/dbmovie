@@ -1,4 +1,5 @@
 import axios, { AxiosResponse } from "axios";
+import { env } from "../env/env";
 
 export interface Request {
     postRequest(url: string, data: any, header: {}): Promise<AxiosResponse>
@@ -41,10 +42,10 @@ export default class RequestImpl implements Request {
 
     async _createApiKey(noParams: boolean): Promise<any> {
         if (noParams) {
-            return '?api_key=f62f750b70a8ef11dad44670cfb6aa57'
+            return `?${env.key}`
         }
         else {
-            return '&api_key=f62f750b70a8ef11dad44670cfb6aa57'
+            return `&${env.key}`
         }
     }
 }
