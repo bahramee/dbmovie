@@ -1,4 +1,4 @@
-# React Clean Architecture dbmovie (List of movies)
+# React Clean Architecture dbmovie (list of movies)
 
 this project implemented on the Clean Architecture and styled with `tailwindcss`.
 
@@ -15,7 +15,8 @@ this project implemented on the Clean Architecture and styled with `tailwindcss`
 7. `react-router-dom`
 
 ## About dbmovie
-This project modeled and designed with the `typescript` on the Clean Architecture and coded without any line of `css` that all of user interfaces(UI) styled with the `.tsx` files and the helped of `tailwindcss`.
+This project modeled and designed with the `typescript` on the Clean architecture and coded without any line of `css`. 
+all of user interfaces(UI) styled with the `.tsx` files and the helped of `tailwindcss`.
 
 ## Philosophy
 

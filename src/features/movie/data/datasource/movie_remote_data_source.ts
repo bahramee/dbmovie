@@ -17,25 +17,25 @@ export class MovieRemoteDataSourceImpl implements MovieRemoteDataSource {
     }
 
     async getMovieCredit(id: number): Promise<CreditModel> {
-        const url = `${env.url}/movie/${id}/credits`;
+        const url = env.uc.movie.getMovieCredit.url(id);
         const res = await this.request.getRequest(url, {});
         return res.data;
     }
 
     async getMovieById(id: number): Promise<MovieModel> {
-        const url = `${env.url}/movie/${id}`;
+        const url = env.uc.movie.getMovieById.url(id);
         const res = await this.request.getRequest(url, {});
         return res.data;
     }
 
-    async getMovies(page: number, startDate?: string, endDate?: string): Promise<DiscoverMoviesModel> {
-        const url = `${env.url}/discover/movie?page=${page}&primary_release_date.gte=${startDate}&primary_release_date.lte=${endDate}`
+    async getMovies(page: number, startDate: string, endDate: string): Promise<DiscoverMoviesModel> {
+        const url = env.uc.movie.getMovies.url(page, startDate, endDate);
         const res = await this.request.getRequest(url, {}, false);
         return res.data;
     }
 
     async getGenres(): Promise<GenreModel[]> {
-        const url = `${env.url}/genre/movie/list`
+        const url = env.uc.movie.getGenres.url();
         const res = await this.request.getRequest(url, {});
         return res.data.genres;
     }
