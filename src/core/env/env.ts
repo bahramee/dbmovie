@@ -1,6 +1,6 @@
 export const env = {
     url: 'https://api.themoviedb.org/3',
-    key: 'api_key=f62f750b70a8ef11dad44670cfb6aa57',
+    key: 'api_key=your_api_key',
     uc: {
         movie: {
             getMovieCredit: { url: (id: number) => `${env.url}/movie/${id}/credits` },
